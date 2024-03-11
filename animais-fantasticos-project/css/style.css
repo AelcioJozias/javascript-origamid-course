@@ -1,7 +1,34 @@
 body, h1, h2, ul, li, p, dd, dt, dl {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
+
+/* CSS de  navegação por tab */
+.js .js-tabcontent section {
+  display: none;
+}
+
+.ativo {
+  display: block !important;
+  animation: mostrar .5s forwards;
+}
+
+
+@keyframes mostrar {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+/* FIM */
+
+
 
 img {
   display: block;
@@ -179,6 +206,31 @@ body {
   font-weight: bold;
 }
 
+.bigFont {
+  font-size: 150%;
+}
+
+/* Estilos da barra de rolagem */
+::-webkit-scrollbar {
+  width: 10px; /* Largura da barra de rolagem */
+}
+
+/* Cor de fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Cor de fundo */
+}
+
+/* Cor do indicador (thumb) da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background-color: #ff8800; /* Cor da barra de rolagem */
+  border-radius: 5px; /* Borda arredondada */
+}
+
+/* Hover na barra de rolagem */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff8800; /* Cor ao passar o mouse */
+}
+
 @media (max-width: 700px) {
   body {
     grid-template-columns: 1fr;
@@ -205,31 +257,4 @@ body {
   .copy {
     margin-bottom: 0px;
   }
-}
-
-
-/* Estilos da barra de rolagem */
-::-webkit-scrollbar {
-    width: 10px; /* Largura da barra de rolagem */
-}
-
-/* Cor de fundo da barra de rolagem */
-::-webkit-scrollbar-track {
-    background-color: #f1f1f1; /* Cor de fundo */
-}
-
-/* Cor do indicador (thumb) da barra de rolagem */
-::-webkit-scrollbar-thumb {
-    background-color: #ff8800; /* Cor da barra de rolagem */
-    border-radius: 5px; /* Borda arredondada */
-}
-
-/* Hover na barra de rolagem */
-::-webkit-scrollbar-thumb:hover {
-    background-color: #ff8800; /* Cor ao passar o mouse */
-}
-
-
-.bigFont {
-  font-size: 150%;
 }
