@@ -10,6 +10,9 @@ body, h1, h2, ul, li, p, dd, dt, dl {
 
 .ativo {
   display: block !important;
+}
+
+.js .js-tabcontent section.ativo {
   animation: mostrar .5s forwards;
 }
 
@@ -24,10 +27,41 @@ body, h1, h2, ul, li, p, dd, dt, dl {
     transform: translate3d(0, 0, 0);
   }
 }
-
-
 /* FIM */
 
+
+/* accondion-list*/
+.js .js-accordion dd {
+  display: none;
+}
+
+.js .js-accordion dt::after {
+  content: '⮧';
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.js .js-accordion dt.ativo::after {
+  content: '⮥';
+}
+
+.js .js-accordion dd {
+  animation: mostrarAccordionList 1s forwards;
+}
+
+@keyframes mostrarAccordionList {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 1000px;
+    opacity: 1;
+  }
+  
+}
+
+/* Fim accordion */
 
 
 img {
