@@ -1,6 +1,5 @@
 function iniciarNavegacaoPorFoto() {
 
-
     /* esse 'js' estamos usando ele como um root, aplicando
     * todo o resto do código apenas se a class 'js' existir no elemento 'html', o que significa que o js
     * da página está ativo
@@ -46,7 +45,23 @@ function initAccordion() {
 
 initAccordion();
 
+function initSmoothScroll() {
+    const menuLinksInternos = document.querySelectorAll('.js [href^="#"]')
 
+    menuLinksInternos.forEach(link => link.addEventListener('click', scrollSuave))
+
+    function scrollSuave(event) {
+        event.preventDefault();
+        const idHref = this.getAttribute('href')
+        const secaoANavegar = document.querySelector('.js ' + idHref).offsetTop
+        window.scrollTo({
+            top:secaoANavegar,
+            behavior:"smooth"
+        })
+    }
+}
+
+initSmoothScroll()
 
 
 
