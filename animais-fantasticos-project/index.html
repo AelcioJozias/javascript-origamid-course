@@ -10,6 +10,7 @@
   <script>
       document.documentElement.classList.add('js')
   </script>
+  <link rel="stylesheet" type="text/css" href="css/animarScroll.css" />
 </head>
 <body>
   <nav class="menu">
@@ -20,7 +21,7 @@
       <li><a href="https://www.origamid.com/">Dev →</a></li>
     </ul>
   </nav>
-  <section class="grid-section animais js-tabmenu" id="animais">
+  <section class="grid-section animais js-tabmenu js-scroll" id="animais">
     <h1 class="titulo">Animais Fantásticos</h1>
     <ul class="animais-lista">
       <li>
@@ -101,7 +102,7 @@
     </div>
   </section>
 
-  <section class="grid-section faq js-accordion" id="faq">
+  <section class="grid-section faq js-accordion js-scroll" id="faq">
     <h1 class="titulo">FAQ</h1>
     <dl class="faq-lista">
       <dt>Qual a idade dos animais?</dt>
@@ -115,7 +116,7 @@
     </dl>
   </section>
 
-  <section class="grid-section contato" id="contato">
+  <section class="grid-section contato js-scroll" id="contato">
     <h1 class="titulo">Contato</h1>
     <div class="mapa">
       <img src="img/mapa.png">
@@ -128,7 +129,7 @@
     </ul>
   </section>
 
-  <footer class="copy">
+  <footer class="copy js-scroll">
     <p>Todos os direitos reservados.</p>
   </footer>
 
