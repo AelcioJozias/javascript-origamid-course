@@ -1,17 +1,40 @@
-function teste() {
-    return 1+1
+// Crie uma função construtora de Pessoas
+// Deve conter nome, sobrenome e idade
+// Crie um método no protótipo que retorne
+// o nome completo da pessoa
+
+class Pessoa {
+    constructor(nome, sobrenome, idade) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.idade = idade;
+    }
+    nomeCompleto() {
+        return `${this.nome} ${this.sobrenome}. Idade ${this.idade} anos`;
+    }
+
 }
 
+const p1 = new Pessoa('aelcio', 'jozias', 21)
+console.log(p1.nomeCompleto())
 
-function Teste2(a) {
-    this.a= a
-}
+// Liste os métodos acessados por
+// dados criados com NodeList,
+// HTMLCollection, Document
+console.log(Object.getOwnPropertyNames(NodeList.prototype))
+console.log(Object.getOwnPropertyNames(HTMLCollection.prototype))
 
-Teste2.prototype.pessoa = function () {
-    return 'sou uma pessoa'
-}
-const t2 = new Teste2()
+// Liste os construtores dos dados abaixo
+const li = document.querySelector('li');
 
-console.log(t2.pessoa())
 
-console.log(Teste2.prototype)
+li.constructor
+li.click;
+li.innerText;
+li.value.constructor;
+li.hidden;
+li.offsetLeft;
+li.click();
+
+// Qual o construtor do dado abaixo:
+li.hidden.constructor.name;
